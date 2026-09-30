@@ -113,7 +113,7 @@ main section {
 #hero {
   position: relative;
   padding: 100px 30px;
-  border-radius: 12px;
+  border-radius: 0;
   overflow: hidden;
   background-image: url("hero.jpeg");
   background-size: cover;
@@ -270,8 +270,8 @@ h1, h2 {
 @media (min-width: 1100px) {
   
   body {
-    padding: 40px;
-  }
+    padding: 0;                                                                                                                   
+ max-width:none }
   
   header h1 {
     font-size: 32px;
