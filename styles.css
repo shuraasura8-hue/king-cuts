@@ -1,0 +1,300 @@
+/* ============================
+   Reset + Base
+   ============================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: #f5f5f5;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ============================
+   Header
+   ============================ */
+ header {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+   border-bottom: 1px solid #333;
+   gap: 15px;
+ }
+
+header h1 {
+   font-size: 28px;
+   color: #c9a86a;
+    white-space: nowrap;
+}
+
+header nav {
+   display: flex;
+   gap: 15px;
+   align-items: center;
+}
+
+header nav a {
+   color: #f5f5f5;
+   text-decoration: none;
+   font-size: 14px;
+}
+
+header nav a.header-cta {
+   background-color: #c9a86a;
+   color: #0f0f0f;
+   padding: 8px 16px;
+   border-radius: 20px;
+   font-weight: bold;
+   white-space: nowrap;
+}
+
+header nav a {
+  transition: color 0.2s ease;
+}
+
+header nav a:hover {
+  color: #c9a86a;
+}
+
+header nav a.header-cta:hover {
+  background-color: #d4b87a;
+  color: #0f0f0f;
+}
+
+
+
+/* ============================
+   Sections — shared spacing
+   ============================ */
+
+main section {
+  padding: 60px 0;
+}
+
+/* ============================
+   Hero
+   ============================ */
+#hero h2{
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #f5f5f5;
+ }
+
+#hero p {
+  font-size: 18px;
+  color: #b8b8b8;
+  margin-bottom: 0;
+  padding-bottom: 40px;
+}
+
+#hero a {
+  display: inline-block;
+  background-color: #c9a86a;
+  color: #0f0f0f;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+
+}
+
+#hero {
+  position: relative;
+  padding: 100px 30px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-image: url("hero.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+  #hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 0;
+}
+
+#hero>* {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+
+/* ============================
+   Section headings + paragraphs
+   ============================ */
+
+
+main section h2 {
+  font-size: 28px;
+  color: #c9a86a;
+  margin-bottom: 20px;
+}
+
+main section p {
+  color: #d0d0d0;
+  margin-bottom: 15px;
+}
+
+/* ============================
+   Services list
+   ============================ */
+
+
+.services-list {
+  list-style: none;
+}
+
+.services-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px #333;
+}
+
+.service-price {
+ color: #c9a86a;
+ font-weight: bold;
+}
+
+
+/* ============================
+   Gallery grid
+   ============================ */
+
+
+.gallery-grid {
+   display: grid;
+  grid-template-columns:   repeat(2,1fr);
+   gap: 10px;
+}
+
+
+.gallery-item {
+   aspect-ratio: 1;
+   background-color: #333;
+   border-radius: 8px;
+
+}
+
+.gallery-item {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#about,
+#gallery, #barber, services, visit{
+  background-color: #141414;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  border-radius: 12px;
+}
+
+
+/* ============================
+   Footer
+   ============================ */
+
+
+footer {
+  padding: 40px 0;
+  border-top: 1px solid #333;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+/* ============================
+   Barber bio
+   ============================ */
+
+.barber-card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.barber-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.barber-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+h1, h2 {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
+
+/* ============================
+   Responsive — tablet & laptop
+   ============================ */
+
+@media (min-width: 600px) {
+  
+  body {
+    padding: 40px;
+  }
+  
+  header h1 {
+    font-size: 32px;
+  }
+  
+  #hero h2 {
+    font-size: 48px;
+  }
+  
+  #hero p {
+    font-size: 20px;
+    max-width: 600px;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .barber-photo {
+    width: 160px;
+    height: 160px;
+  }
+  
+}
+
+
