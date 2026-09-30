@@ -267,7 +267,7 @@ h1, h2 {
    Responsive — tablet & laptop
    ============================ */
 
-@media (min-width: 600px) {
+@media (min-width: 1100px) {
   
   body {
     padding: 40px;
